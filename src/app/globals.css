@@ -1,0 +1,215 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+}
+
+.App {
+  background: linear-gradient(137deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.2)), url(../assets/bgbosch1.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  max-height: 100vh;
+}
+
+.headerRibbon:before {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 13px;
+  content: "";
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  background-image: url(../assets/BoschHeader.svg);
+  z-index: 100;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+  align-items: center;
+}
+
+.heading {
+  font-family: 'Lemon', serif;
+  color: #2d3f3e;
+  background: -webkit-linear-gradient(190deg, #d42027, #273d82);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.subhead {
+  font-family: 'Inter', sans-serif;
+}
+
+.button-87 {
+  padding: 12px 20px;
+  text-align: center;
+  text-transform: uppercase;
+  transition: 0.5s;
+  background-size: 200% auto;
+  color: white;
+  border-radius: 10px;
+  display: block;
+  border: 0px;
+  box-shadow: 0px 0px 14px -7px #f09819;
+  background-image: linear-gradient(45deg, #FF512F 0%, #F09819 51%, #FF512F 100%);
+  cursor: pointer;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  font-size: 0.8rem;
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.button-87:not(:disabled):hover {
+  background-position: right center;
+  color: #fff;
+  text-decoration: none;
+}
+
+.button-87:active {
+  transform: scale(0.95);
+}
+
+.button-87:disabled {
+  /* color: rgb(222, 222, 222); */
+  background: #e0e0e0;
+  color: #ababab;
+}
+
+
+.by-ai {
+  background-color: white;
+  place-self: flex-start;
+  display: flex;
+  flex-direction: column;
+}
+
+.by-ai a {
+  color: #0070E0;
+}
+
+.by-human {
+  background-color: green;
+  color: white;
+  place-self: flex-end;
+}
+
+.unrecongnized {
+  background: black;
+  color: white;
+  place-self: flex-end;
+}
+
+/* loader */
+.loader {
+  width: 48px;
+  height: 48px;
+  border: 2px solid #FFF;
+  border-radius: 50%;
+  display: inline-block;
+  box-sizing: border-box;
+  animation: rotation 1s linear infinite;
+}
+
+.loader::after {
+  content: '';
+  box-sizing: border-box;
+  position: absolute;
+  left: 50%;
+  top: 0;
+  background: #FF3D00;
+  width: 3px;
+  height: 24px;
+  transform: translateX(-50%);
+}
+
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.bubble-bottom {
+  position: relative;
+  background: #212728;
+  border-radius: 10px;
+}
+
+.bubble-bottom:after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border: calc(50px * 0.13) solid transparent;
+  border-top-color: #333;
+  border-bottom: 0;
+  margin-left: calc(50px * 0.13 * -1);
+  margin-bottom: calc(50px * 0.13 * -1);
+}
+
+.response-container {
+  display: flex;
+  gap: 0.5rem;
+  align-items: flex-start;
+  place-self: flex-start;
+}
+
+.chat-icon {
+  padding: 0.2rem;
+  background: aliceblue;
+  border-radius: 9999px;
+  width: 2.5rem;
+}
+
+.question-icon {
+  padding: 0.2rem;
+  background: aliceblue;
+  border-radius: 9999px;
+  width: 2rem;
+}
+
+.question-container {
+  display: flex;
+  gap: 0.5rem;
+  align-items: flex-start;
+  place-self: flex-end;
+}
+
+.hr-bottom {
+  margin-top: -10px !important;
+  margin-bottom: 0.5rem;
+}
+
+.feedbackButtonLike {
+  padding: 4px;
+  border: 1px solid #2F855A;
+  border-radius: 8px;
+}
+
+.feedbackButtonDislike {
+  padding: 4px;
+  border: 1px solid #C53030;
+  border-radius: 8px;
+}
